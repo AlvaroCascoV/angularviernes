@@ -13,6 +13,6 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideHttpClient(withFetch()),
+    provideHttpClient(withFetch()), //para usar fetch añadir el parametro
   ],
 };
