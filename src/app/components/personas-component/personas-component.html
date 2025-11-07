@@ -9,8 +9,9 @@
   </ul>
   <h1>Personas</h1>
   @if (personas) {
-  <table class="table table-striped">
+  <table class="table table-striped table-primary">
     <thead>
+      <h4>HTTP</h4>
       <tr>
         <th>IdPersona</th>
         <th>Nombre</th>
@@ -20,6 +21,50 @@
     </thead>
     <tbody>
       @for (persona of personas; track persona) {
+      <tr>
+        <td>{{ persona.IdPersona }}</td>
+        <td>{{ persona.Nombre }}</td>
+        <td>{{ persona.Email }}</td>
+        <td>{{ persona.Edad }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  } @if (personasAxios) {
+  <table class="table table-striped table-success">
+    <thead>
+      <h4>Axios</h4>
+      <tr>
+        <th>IdPersona</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (persona of personasAxios; track persona) {
+      <tr>
+        <td>{{ persona.IdPersona }}</td>
+        <td>{{ persona.Nombre }}</td>
+        <td>{{ persona.Email }}</td>
+        <td>{{ persona.Edad }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  } @if (personasFetch) {
+  <table class="table table-striped table-info">
+    <thead>
+      <h4>Fetch</h4>
+      <tr>
+        <th>IdPersona</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (persona of personasFetch; track persona) {
       <tr>
         <td>{{ persona.IdPersona }}</td>
         <td>{{ persona.Nombre }}</td>
