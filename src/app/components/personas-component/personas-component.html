@@ -9,10 +9,25 @@
   </ul>
   <h1>Personas</h1>
   @if (personas) {
-  <ul class="list-group">
-    @for (persona of personas; track persona) {
-    <li class="list-group-item">{{ persona.Nombre }}, {{ persona.Edad }}</li>
-    }
-  </ul>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>IdPersona</th>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Edad</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (persona of personas; track persona) {
+      <tr>
+        <td>{{ persona.IdPersona }}</td>
+        <td>{{ persona.Nombre }}</td>
+        <td>{{ persona.Email }}</td>
+        <td>{{ persona.Edad }}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
   }
 </div>
