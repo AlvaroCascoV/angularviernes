@@ -1,0 +1,18 @@
+<div>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" [routerLink]="['/']">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" [routerLink]="['/personas']">Personas</a>
+    </li>
+  </ul>
+  <h1>Personas</h1>
+  @if (personas) {
+  <ul class="list-group">
+    @for (persona of personas; track persona) {
+    <li class="list-group-item">{{ persona.Nombre }}, {{ persona.Edad }}</li>
+    }
+  </ul>
+  }
+</div>
